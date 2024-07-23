@@ -29,7 +29,7 @@ def search_linkedin(first_name, last_name, credential_text, address, state):
         if links:  # Check if links is not empty
             for link in links:
                 href = link.get_attribute('href')
-                if href and href.startswith('http') and 'linkedin.com/in/' in href:
+                if href and 'linkedin.com/in/' in href:
                     return href
         return None
     except Exception as e:
